@@ -28,7 +28,8 @@ function App() {
       headers: { 'Content-Type': 'application/json' }
     })
       .then(() => {
-        getElements();
+        // getElements();
+        dispatch({ type: 'FETCH_ELEMENTS' });
         setNewElement('');
       })
       .catch(error => {
